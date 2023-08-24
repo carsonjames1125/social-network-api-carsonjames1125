@@ -50,7 +50,8 @@ const thoughtSchema = new Schema (
 
         },
         createdAt: {
-            type: Date.now,
+            type: Date,
+            default: Date.now,
             get: createdAtVal => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a'),
         },
         username: {
@@ -78,6 +79,6 @@ thoughtSchema.virtual('reactionCount')
 
 // user model creation using userschema
 
-const Thought = model('THought', thoughtSchema);
+const Thought = model('Thought', thoughtSchema);
 
 module.exports = Thought;

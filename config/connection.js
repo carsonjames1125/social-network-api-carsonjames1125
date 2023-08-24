@@ -5,7 +5,7 @@ const connectionStr =
 process.env.MONGODB_URI || 'mongodb://localhost:27017/socialDB';
 
 connect(connectionStr, {
-    useNewUrlParsers: true,
+    useNewUrlParser: true,
     useUnifiedTopology: true,
 });
 

@@ -10,7 +10,7 @@ module.exports = {
 
     // route to get a single thought
 
-    getSinglethought(req, res) {
+    getSingleThought(req, res) {
         Thought.findOne({ _id:req.params.thoughtId })
         .select('-__v')
         .then((thought) => 
